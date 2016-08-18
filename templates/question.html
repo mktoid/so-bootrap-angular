@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col-lg-12 col-md-12">
+        <div class="row">
+            <div class="col-lg-1 col-md-1">
+                <h1 ng-bind-html="score"></h1>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <h3 ng-bind-html="title" class="longtitle"></h3>
+                <ul class="list-inline">
+                    <li ng-repeat="tag in tags"><button type="button" class="btn btn-default btn-xs" ng-bind-html="tag"></button></li>
+                </ul>
+                <p><img class="profile_image" lazy-img="{{profile_image}}"> {{ display_name }}, {{ date }}</p>
+                <button class="btn btn-default" ng-click="goBack()">&laquo; Back</button>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h3>{{ answer_count }} answers</h3>
+                <ul class="list-unstyled">
+                    <li ng-repeat="answerItem in answerItems" class="repeated-item">
+                        <img class="profile_image" lazy-img="{{answerItem.profile_image}}">
+                        <span ng-bind-html="answerItem.display_name"></span>, 
+                        <span ng-bind-html="answerItem.date"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="col-lg-6 col-md-6">
+        <h3 ng-bind-html="header"></h3>
+        <table class="table">
+            <tr>
+                <th>
+                    <div class="clickable" ng-click="sortType = 'id'; sortReverse = !sortReverse">Score<span ng-show="sortType == 'id'">&nbsp;&#8597;</span></div>
+                </th>
+                <th>
+                </th>
+                <th>
+                    <div class="clickable"  ng-click="sortType = 'author'; sortReverse = !sortReverse">Author<span ng-show="sortType == 'author'">&nbsp;&#8597;</span></div>
+                </th>
+                <th>
+                    <div class="clickable"  ng-click="sortType = 'title'; sortReverse = !sortReverse">Title<span ng-show="sortType == 'title'">&nbsp;&#8597;</span></div>
+                </th>
+                <th>
+                    <div class="clickable"  ng-click="sortType = 'answers'; sortReverse = !sortReverse">Answers<span ng-show="sortType == 'answers'">&nbsp;&#8597;</span></div>
+                </th>
+                <th>
+                    <div class="clickable"  ng-click="sortType = 'tags'; sortReverse = !sortReverse">Tags<span ng-show="sortType == 'tags'">&nbsp;&#8597;</span></div>
+                </th>
+            </tr>
+            <tr ng-repeat="item in searchResultItems | orderBy:sortType:sortReverse" class="repeated-item">
+                <td ng-bind-html="item.score"></td>
+                <td><img class="profile_image" lazy-img="{{item.profile_image}}"></td>
+                <td ng-bind-html="item.author"></td>
+                <td ng-bind-html="item.title" class="longtitle"></td>
+                <td ng-bind-html="item.answers"></td>
+                <td>
+                    <ul class="list-inline">
+                        <li ng-repeat="tag in item.tags"><button type="button" class="btn btn-default btn-xs" ng-bind-html="tag"></button></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-1 col-md-1">
+    </div>
+    <div class="col-lg-5 col-md-5">
+        <div id="details"></div>
+    </div>
+</div>
+

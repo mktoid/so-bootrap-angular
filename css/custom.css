@@ -1,0 +1,21 @@
+
+.clickable {
+    cursor: pointer;
+}
+
+.notclickable {
+    cursor: default;
+}
+
+.profile_image {
+    height: 16px;
+    width:  16px;
+}
+
+.highlight {
+    color: #aaa;
+}
+
+.longtitle {
+     word-break: break-all;
+}
