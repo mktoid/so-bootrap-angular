@@ -24,7 +24,9 @@
             <tr ng-repeat="item in searchResultItems | orderBy:sortType:sortReverse" class="repeated-item">
                 <td ng-bind-html="item.id"></td>
                 <td><img class="profile_image" lazy-img="{{item.profile_image}}"></td>
-                <td ng-click="goAuthor(item.user_id, item.author)" ng-bind-html="item.author"></td>
+                <td ng-click="goAuthor(item.user_id, item.author)">
+                    <button type="button" class="btn btn-default btn-xs" ng-bind-html="item.author"></button>
+                </td>
                 <td ng-click="goQuestion(item.question_id)" ng-bind-html="item.title" class="longtitle"></td>
                 <td ng-click="goQuestion(item.question_id)" ng-bind-html="item.answers"></td>
                 <td>

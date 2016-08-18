@@ -7,7 +7,7 @@
             <div class="col-lg-5 col-md-5">
                 <h3 ng-bind-html="title" class="longtitle"></h3>
                 <ul class="list-inline">
-                    <li ng-repeat="tag in tags"><button type="button" class="btn btn-default btn-xs" ng-bind-html="tag"></button></li>
+                    <li ng-repeat="tag in tags"><mark ng-bind-html="tag"></mark></li>
                 </ul>
                 <p><img class="profile_image" lazy-img="{{profile_image}}"> {{ display_name }}, {{ date }}</p>
                 <button class="btn btn-default" ng-click="goBack()" autofocus>&laquo; Back</button>
