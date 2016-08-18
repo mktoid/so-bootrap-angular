@@ -25,10 +25,12 @@
     from    { opacity: 0.3;}
 }
 
+/* 
 .app-view.ng-enter { 
     animation: fadeIn 0.5s both ease-in; 
     z-index: 8888; 
-}
+} 
+*/
 .app-view.ng-leave { 
     animation: slideOutLeft 0.5s both ease-in; 
     z-index: 9999; 
