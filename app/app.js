@@ -2,9 +2,9 @@
 
 var soApiKey = 'LFLwosuAarhs53AImoQzcQ(('; 
 
-angular.module('so', ['ngRoute', 'ngResource', 'ngSanitize', 'angularLazyImg', 'ngAnimate'])
+var so = angular.module('so', ['ngRoute', 'ngResource', 'ngSanitize', 'angularLazyImg', 'ngAnimate']);
 
-    .config(
+so.config(
         ['$routeProvider',
         function($routeProvider) {
             $routeProvider
